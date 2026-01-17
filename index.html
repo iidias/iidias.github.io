@@ -6,17 +6,29 @@
     <title>Igor Dias | Dev Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css?v=3">
+    <link rel="stylesheet" type="text/css" href="style.css?v=4">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+    <div class="lang-menu">
+        <div class="selected-lang">
+            <i class="fa-solid fa-globe"></i> <span class="lang-text">PT-BR</span>
+        </div>
+        <ul>
+            <li><a href="#" class="br" onclick="changeLanguage('pt')">PT-BR</a></li>
+            <li><a href="#" class="en" onclick="changeLanguage('en')">EN</a></li>
+            <li><a href="#" class="es" onclick="changeLanguage('es')">ES</a></li>
+        </ul>
+    </div>
+
     <header>
         <img src="img/perfil.jpg" alt="Minha Foto" class="profile-img"> 
         <h1>Igor Dias</h1>
-        <p class="subtitle">Information Systems Student | System Dev | AI Enthusiast</p>
         
-        <p class="about-text">
+        <p class="subtitle" data-i18n="subtitle">Information Systems Student | System Dev | AI Enthusiast</p>
+        
+        <p class="about-text" data-i18n="about">
             Apaixonado por entender como as coisas funcionam "por baixo do capô". 
             Atualmente focado estrutura de dados, algoritmos complexos e visão computacional.
             Sempre transformando café em código C e Java.
@@ -24,94 +36,94 @@
     </header>
 
     <section id="skills">
-        <h2 class="section-title">Habilidades</h2>
+        <h2 class="section-title" data-i18n="skills_title">Habilidades</h2>
         <div class="skills-container">
             <div class="skill-box">
-                <h3><i class="fa-solid fa-code"></i> Tecnologias</h3>
+                <h3><i class="fa-solid fa-code"></i> <span data-i18n="tech_title">Tecnologias</span></h3>
                 <div class="tags">
                     <span class="tag">C / C++</span>
                     <span class="tag">Java</span>
                     <span class="tag">Python</span>
-                    <span class="tag">Programação funcional / Haskell</span>
-                    <span class="tag">Programação declarativa / Prolog</span>
+                    <span class="tag" data-i18n="tag_func">Programação funcional / Haskell</span>
+                    <span class="tag" data-i18n="tag_decl">Programação declarativa / Prolog</span>
                     <span class="tag">Git / GitHub</span>
                     <span class="tag">Linux / Docker</span>
                 </div>
             </div>
             <div class="skill-box">
-                <h3><i class="fa-solid fa-brain"></i> Soft Skills</h3>
+                <h3><i class="fa-solid fa-brain"></i> <span data-i18n="soft_title">Soft Skills</span></h3>
                 <div class="tags">
-                    <span class="tag">Resolução de Problemas</span>
-                    <span class="tag">Autodidata</span>
-                    <span class="tag">Comunicação Técnica</span>
-                    <span class="tag">Trabalho em Equipe</span>
-                    <span class="tag">Pensamento Lógico</span>
+                    <span class="tag" data-i18n="soft_1">Resolução de Problemas</span>
+                    <span class="tag" data-i18n="soft_2">Autodidata</span>
+                    <span class="tag" data-i18n="soft_3">Comunicação Técnica</span>
+                    <span class="tag" data-i18n="soft_4">Trabalho em Equipe</span>
+                    <span class="tag" data-i18n="soft_5">Pensamento Lógico</span>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2 class="section-title">Projetos Recentes</h2>
+        <h2 class="section-title" data-i18n="projects_title">Projetos Recentes</h2>
         
         <div class="projects-wrapper">
             <div class="project-card">
                 <div>
                     <div class="project-title"><i class="fa-brands fa-java"></i> Java Pathfinding Visualizer</div>
-                    <p class="project-desc">
+                    <p class="project-desc" data-i18n="desc_java">
                         Aplicação gráfica interativa para visualizar algoritmos de busca (A* e Dijkstra) encontrando o menor caminho em tempo real.
                     </p>
                 </div>
                 <a href="https://github.com/iidias/java-pathfinding-visualizer" class="btn-github" target="_blank">
-                    <i class="fa-brands fa-github"></i> Ver Código
+                    <i class="fa-brands fa-github"></i> <span data-i18n="btn_view">Ver Código</span>
                 </a>
             </div>
 
             <div class="project-card">
                 <div>
-                    <div class="project-title"><i class="fa-solid fa-terminal"></i> Mini Shell em C</div>
-                    <p class="project-desc">
+                    <div class="project-title"><i class="fa-solid fa-terminal"></i> <span data-i18n="title_shell">Mini Shell em C</span></div>
+                    <p class="project-desc" data-i18n="desc_shell">
                         Um interpretador de comandos cross-platform (Windows/Linux) com gerenciamento de processos, built-ins e manipulação de memória.
                     </p>
                 </div>
                 <a href="https://github.com/iidias/c-shell-mini" class="btn-github" target="_blank">
-                    <i class="fa-brands fa-github"></i> Ver Código
+                    <i class="fa-brands fa-github"></i> <span data-i18n="btn_view">Ver Código</span>
                 </a>
             </div>
 
             <div class="project-card">
                 <div>
                     <div class="project-title"><i class="fa-brands fa-python"></i> HandOS Lite (PyVision)</div>
-                    <p class="project-desc">
+                    <p class="project-desc" data-i18n="desc_hand">
                         Interface futurista de controle gestual (mouse e jogos) usando Webcam, OpenCV e MediaPipe. Sem tocar no teclado!
                     </p>
                 </div>
                 <a href="https://github.com/iidias/py-vision-controller" class="btn-github" target="_blank">
-                    <i class="fa-brands fa-github"></i> Ver Código
+                    <i class="fa-brands fa-github"></i> <span data-i18n="btn_view">Ver Código</span>
                 </a>
             </div>
 
             <div class="project-card">
                 <div>
-                    <div class="project-title"><i class="fa-solid fa-file-zipper"></i> Compressor Huffman C++</div>
-                    <p class="project-desc">
+                    <div class="project-title"><i class="fa-solid fa-file-zipper"></i> <span data-i18n="title_huff">Compressor Huffman C++</span></div>
+                    <p class="project-desc" data-i18n="desc_huff">
                         Implementação do algoritmo de Huffman para compressão de dados sem perdas, manipulando bits e árvores binárias.
                     </p>
                 </div>
                 <a href="https://github.com/iidias/cpp-huffman-algorithm" class="btn-github" target="_blank">
-                    <i class="fa-brands fa-github"></i> Ver Código
+                    <i class="fa-brands fa-github"></i> <span data-i18n="btn_view">Ver Código</span>
                 </a>
             </div>
 
             <div class="project-card">
                 <div>
-                    <div class="project-title"><i class="fa-solid fa-globe"></i> Este Portfólio</div>
-                    <p class="project-desc">
+                    <div class="project-title"><i class="fa-solid fa-globe"></i> <span data-i18n="title_port">Este Portfólio</span></div>
+                    <p class="project-desc" data-i18n="desc_port">
                         Desenvolvido com HTML5 Semântico e CSS3 Moderno (Flexbox/Grid). Responsivo, acessível e hospedado no GitHub Pages.
                     </p>
                 </div>
                 <a href="https://github.com/iidias/iidias.github.io" class="btn-github" target="_blank">
-                    <i class="fa-brands fa-github"></i> Ver Código
+                    <i class="fa-brands fa-github"></i> <span data-i18n="btn_view">Ver Código</span>
                 </a>
             </div>
 
@@ -119,17 +131,17 @@
     </section>
 
     <footer id="contact">
-        <h2>Vamos conversar?</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 20px;">Estou aberto a novas oportunidades e projetos.</p>
+        <h2 data-i18n="footer_title">Vamos conversar?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="footer_text">Estou aberto a novas oportunidades e projetos.</p>
         
         <div class="social-links">
-            <a href="diasigor3013@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="mailto:diasigor3013@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/igor-dias-b0a4a63a4/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/iidias" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
-        <p style="margin-top: 30px; font-size: 0.8rem; color: #475569;">© 2026 Desenvolvido por Igor Dias</p>
+        <p style="margin-top: 30px; font-size: 0.8rem; color: #475569;" data-i18n="footer_copy">© 2026 Desenvolvido por Igor Dias</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>
